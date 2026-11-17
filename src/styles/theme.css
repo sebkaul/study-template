@@ -1,0 +1,91 @@
+/* One meaning per color.
+   --subject   site header/nav only (set from subject.config.js)
+   --topic     stripe/tab per topic (set per page/card from course.js)
+   --c-*       the five block kinds — fixed everywhere, nothing else uses them
+   --var-*     muted colors for variables inside equations + their explanations */
+:root {
+  color-scheme: light;
+  --subject: #0f766e;
+  --topic: #64748b;
+
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --line: #e2e8f0;
+  --c-ink: var(--ink);
+  --c-muted: var(--ink-2);
+
+  --c-intuition: #15803d;
+  --c-definition: #1d4ed8;
+  --c-equation: #7e22ce;
+  --c-trap: #b91c1c;
+  --c-example: #b45309;
+
+  --var-a: #0e7490;
+  --var-b: #be185d;
+  --var-c: #4d7c0f;
+  --var-d: #9a3412;
+  --var-e: #4338ca;
+  --var-f: #a16207;
+
+  --radius: 12px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0b1120;
+    --surface: #131c2e;
+    --ink: #e2e8f0;
+    --ink-2: #94a3b8;
+    --line: #26324a;
+    --c-intuition: #4ade80;
+    --c-definition: #60a5fa;
+    --c-equation: #c084fc;
+    --c-trap: #f87171;
+    --c-example: #fbbf24;
+    --var-a: #67e8f9;
+    --var-b: #f9a8d4;
+    --var-c: #bef264;
+    --var-d: #fdba74;
+    --var-e: #a5b4fc;
+    --var-f: #fde047;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0b1120;
+  --surface: #131c2e;
+  --ink: #e2e8f0;
+  --ink-2: #94a3b8;
+  --line: #26324a;
+  --c-intuition: #4ade80;
+  --c-definition: #60a5fa;
+  --c-equation: #c084fc;
+  --c-trap: #f87171;
+  --c-example: #fbbf24;
+  --var-a: #67e8f9;
+  --var-b: #f9a8d4;
+  --var-c: #bef264;
+  --var-d: #fdba74;
+  --var-e: #a5b4fc;
+  --var-f: #fde047;
+}
+
+.kind-intuition { --k: var(--c-intuition); }
+.kind-definition { --k: var(--c-definition); }
+.kind-equation { --k: var(--c-equation); }
+.kind-trap { --k: var(--c-trap); }
+.kind-example { --k: var(--c-example); }
+.kind-neutral { --k: var(--ink-2); }
+
+.var-a { color: var(--var-a); }
+.var-b { color: var(--var-b); }
+.var-c { color: var(--var-c); }
+.var-d { color: var(--var-d); }
+.var-e { color: var(--var-e); }
+.var-f { color: var(--var-f); }
+span.var { font-weight: 600; }
