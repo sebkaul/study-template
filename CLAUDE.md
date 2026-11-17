@@ -47,7 +47,7 @@ Never hard-code hex in pages. Use `tone()`, the CSS vars, or a block `kind`.
 - Use `scripts/screenshot.sh <slug>` and **look** at the result before you call a page done.
 
 ## Commands
-`npm run dev` · `npm run lint` · `npm run build` · `scripts/screenshot.sh <slug>` · `scripts/extract-sources.sh`
+`npm run dev` · `npm run lint` · `npm run build` · `scripts/screenshot.sh <slug>` · `scripts/source.py find|page|grep`
 
 ## Git
 - Each page goes **issue → `page/<issue#>-<slug>` branch → one commit → PR "Closes #N"**. The user squash-merges. Never merge yourself.

@@ -27,3 +27,4 @@ dist-ssr
 sources/*
 !sources/README.md
 .cache
+.claude/settings.local.json
